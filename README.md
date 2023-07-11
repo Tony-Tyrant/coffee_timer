@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# Project Name
+
+4:6 Method Coffee Timer
+
+## Usage
+
+Helping people to make a hand drip coffee using 4:6 method
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
