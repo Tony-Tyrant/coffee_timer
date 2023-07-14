@@ -70,7 +70,7 @@ export default function Header() {
                     {text.about[lang]}
                 </button>
 
-                <div class="collapse" id="About">
+                <div className="collapse" id="About">
                     <div className="my-1 mx-3">
                         <div className="px-3 text-light">
                             <p>{text.aboutP1a[lang]}<b>{text.aboutP1Bold[lang]}</b>{text.aboutP1b[lang]}</p>

@@ -82,13 +82,13 @@ export default function Customize() {
     return (
         <div>
             <form className="mb-4">
-                <label for="volume">{text.volume1[lang]}</label>
+                <label htmlFor="volume">{text.volume1[lang]}</label>
 
                 <br className="d-sm-none" />
                 <input
                     id="volume"
                     type="number"
-                    inputmode="numeric"
+                    inputMode="numeric"
                     min="200"
                     max="1000"
                     value={volume}
@@ -98,10 +98,10 @@ export default function Customize() {
 
                 </input><span>ml</span>
                 <br />
-                <label for="volume">{text.volume2[lang]}</label>
+                <label htmlFor="volume">{text.volume2[lang]}</label>
                 <hr /><br />
 
-                <label for="powderRatio">{text.powderRatio1[lang]}</label>
+                <label htmlFor="powderRatio">{text.powderRatio1[lang]}</label>
                 <br className="d-sm-none" />
                 <select 
                     id="powderRatio" 
@@ -119,7 +119,7 @@ export default function Customize() {
                     <option value={18}>1 : 18</option>
                 </select>
                 <br />
-                <label for="powderRatio">{text.powderRatio2[lang]}</label>
+                <label htmlFor="powderRatio">{text.powderRatio2[lang]}</label>
                 <hr />
 
                 <label>{text.pour1[lang]}</label>
@@ -134,31 +134,31 @@ export default function Customize() {
                     <div className="px-2 py-2 d-flex">
 
                         <input type="radio" id="3" value={3} name="pour"></input>
-                        <label for="3">3</label>
+                        <label htmlFor="3">3</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="4" value={4} name="pour"></input>
-                        <label for="4">4</label>
+                        <label htmlFor="4">4</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="5" value={5} name="pour" checked={pour===5? true : false}></input>
-                        <label for="5">5</label>
+                        <label htmlFor="5">5</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="6" value={6} name="pour"></input>
-                        <label for="6">6</label>
+                        <label htmlFor="6">6</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="7" value={7} name="pour"></input>
-                        <label for="7">7</label>
+                        <label htmlFor="7">7</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="8" value={8} name="pour"></input>
-                        <label for="8">8</label>
+                        <label htmlFor="8">8</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="9" value={9} name="pour"></input>
-                        <label for="9">9</label>
+                        <label htmlFor="9">9</label>
                     </div>
                 </fieldset>
                 <label>{text.pour3[lang]}</label>
@@ -176,35 +176,35 @@ export default function Customize() {
                     <div className="px-2 py-2 d-flex">
 
                         <input type="radio" id="1st" value={firstPourOptions[0]} name="firstPour"></input>
-                        <label for="1st">{firstPourOptions[0] + 'g'}</label>
+                        <label htmlFor="1st">{firstPourOptions[0] + 'g'}</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="2nd" value={firstPourOptions[1]} name="firstPour"></input>
-                        <label for="2nd">{firstPourOptions[1] + 'g'}</label>
+                        <label htmlFor="2nd">{firstPourOptions[1] + 'g'}</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="3rd" value={firstPourOptions[2]} name="firstPour" checked={firstPour===40? true : false}></input>
-                        <label for="3rd">{firstPourOptions[2] + 'g'}</label>
+                        <label htmlFor="3rd">{firstPourOptions[2] + 'g'}</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="4th" value={firstPourOptions[3]} name="firstPour"></input>
-                        <label for="4th">{firstPourOptions[3] + 'g'}</label>
+                        <label htmlFor="4th">{firstPourOptions[3] + 'g'}</label>
                     </div>
                     <div className="px-2 py-2">
                         <input type="radio" id="5th" value={firstPourOptions[4]} name="firstPour"></input>
-                        <label for="5th">{firstPourOptions[4] + 'g'}</label>
+                        <label htmlFor="5th">{firstPourOptions[4] + 'g'}</label>
                     </div>
                 </fieldset>
                 <label>{text.firstPour3[lang]}</label>
                 <hr />
 
-                <label for="totalTime">{text.totalTime1[lang]}</label>
+                <label htmlFor="totalTime">{text.totalTime1[lang]}</label>
                 <br className="d-sm-none" />
                 <br className="d-sm-none" />
                 <input
                     id="totalTime"
                     type="number"
-                    inputmode="numeric"
+                    inputMode="numeric"
                     min="120"
                     max="300"
                     value={totalTime}
@@ -214,7 +214,7 @@ export default function Customize() {
 
                 </input><span>s</span>
                 <br />
-                <label for="totalTime">{text.totalTime2[lang]}</label>
+                <label htmlFor="totalTime">{text.totalTime2[lang]}</label>
 
             </form>
             <div className="mt-3">

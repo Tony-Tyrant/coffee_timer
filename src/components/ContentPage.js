@@ -14,12 +14,12 @@ export default function ContentPage() {
 
             <div className="row h-25" id="top">
                 {/* language selector */}
-                <ul class="nav nav-underline justify-content-end align-items-center m-1">
-                    <li class="nav-item">
+                <ul className="nav nav-underline justify-content-end align-items-center m-1">
+                    <li className="nav-item">
                         <Link to="/en" className={lang === 'en' ? "nav-link active" : "nav-link"}>EN</Link>
                     </li>
                     <li>/</li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <Link to="/zh" className={lang === 'zh' ? "nav-link active" : "nav-link"}>中文</Link>
                     </li>
                 </ul>

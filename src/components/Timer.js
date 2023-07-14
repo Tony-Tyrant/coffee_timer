@@ -9,7 +9,6 @@ export default function Timer() {
     const { totalTime, confirmed } = useFactor();
     const dispatch = useDispatch();
     const count = useSelector((state) => state.timer.count);
-    console.log(count);
     const [display, setDisplay] = useState("");
     const [timerRun, setTimerRun] = useState(false);
     const [start, setStart] = useState(false);

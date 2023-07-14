@@ -14,7 +14,8 @@ export default function GenerateBarChart() {
                     width: `${60/(pour-2)}%`,
                     height: "1.5rem",
                     backgroundColor: `${colorMap[index]}`,
-                }}>{index+3}</h6>
+                }}
+                key={index}>{index+3}</h6>
         )
     })
 

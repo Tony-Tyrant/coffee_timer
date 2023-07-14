@@ -50,13 +50,13 @@ export default function Summary() {
             } else {
                 return true;
             }
-        } else if (i === intervalMap.length - 1 ) {
+        } else if (i === intervalMap.length - 1) {
             if (count >= intervalMap[i] && count < totalTime) {
                 return false;
             } else {
                 return true;
             }
-        }  else if (i === intervalMap.length ) {
+        } else if (i === intervalMap.length) {
             if (count >= totalTime) {
                 return false;
             } else {
@@ -67,7 +67,7 @@ export default function Summary() {
 
     const summary = intervalMap.map((time, index) => {
         return (
-            <li>
+            <li key={index}>
                 {` = ${time}${text.sammary1[lang]}${pourMap[index]}${text.sammary2[lang]}`}
                 <span hidden={showArrow(index)}>
                     <b>{'<--'}</b>
@@ -75,30 +75,34 @@ export default function Summary() {
             </li>
         );
     })
-    
+
     return (
         <div>
             <div className="row border border-2 border-warning-subtle text-warning-emphasis text-center my-4 p-2">
                 <table>
-                    <tr>
-                        <th>{text.water[lang]}</th>
-                        <th>{text.powder[lang]}</th>
-                        <th>{text.time[lang]}</th>
-                        <th>{text.pour[lang]}</th>
-                    </tr>
-                    <tr>
-                        <td>{water}g</td>
-                        <td>{powder}g</td>
-                        <td>{totalTime}s</td>
-                        <td>{pour}</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>{text.water[lang]}</th>
+                            <th>{text.powder[lang]}</th>
+                            <th>{text.time[lang]}</th>
+                            <th>{text.pour[lang]}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{water}g</td>
+                            <td>{powder}g</td>
+                            <td>{totalTime}s</td>
+                            <td>{pour}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div className="row border border-2 border-warning-subtle mb-4 p-3">
                 <GenerateBarChart />
                 <ol className="mx-2 m-0">
                     {summary}
-                    <li>
+                    <li key={intervalMap.length}>
                         = {totalTime}{text.sammary3[lang]}
                         <span hidden={showArrow(intervalMap.length)}>
                             <b>{'<--'}</b>
