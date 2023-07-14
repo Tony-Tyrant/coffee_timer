@@ -46,10 +46,9 @@ export default function FactorProvider({ children }) {
     /* Calculate the time for each pour */
     const interval = Math.round(totalTime / pour);
     const intervalMap = [0];
-    for(let i=1; i<pour-1; i++) {
+    for(let i=1; i<pour; i++) {
         intervalMap.push(i * interval);
     }
-    intervalMap.push(totalTime);
     
     // console.log(firstPour);
     // console.log(secondPour);

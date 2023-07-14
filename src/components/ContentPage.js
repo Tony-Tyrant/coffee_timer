@@ -10,9 +10,9 @@ export default function ContentPage() {
     const lang = useLang();
 
     return (
-        <div className="container-fluid h-100">
+        <div className="container-fluid h-auto">
 
-            <div className="row">
+            <div className="row h-25" id="top">
                 {/* language selector */}
                 <ul class="nav nav-underline justify-content-end align-items-center m-1">
                     <li class="nav-item">
@@ -29,20 +29,20 @@ export default function ContentPage() {
                 </div>
             </div>
             {/* The input form */}
-            <div className="row my-3">
+            <div className="row my-3 h-50">
                 <div className='col' id="customize">
                     <Customize />
                 </div>
             </div>
             {/* The timer */}
-                <div className="row mx-2">
-                    <div className='col-md-5 col-12' id="summary">
-                        <Summary />
-                    </div>
-                    <div className='col-md-7 col-12' id="timer">
-                        <Timer />
-                    </div>
+            <div className="row mx-2 h-50">
+                <div className='col-md-6 col-12 m-2' id="summary">
+                    <Summary />
                 </div>
+                <div className='col-md-5 col-12 p-0 m-2' id="timer">
+                    <Timer />
+                </div>
+            </div>
         </div>
     );
 }

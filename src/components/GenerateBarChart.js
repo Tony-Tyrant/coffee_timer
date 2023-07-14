@@ -1,5 +1,4 @@
 import React from "react";
-import { useLang } from "./context/LangContext";
 import { useFactor } from "./context/FactorContext";
 
 export default function GenerateBarChart() {
@@ -21,7 +20,7 @@ export default function GenerateBarChart() {
 
 
     return (
-        <div className="row">
+        <div className="row p-0 m-0">
             <h6
                 style={{
                     display:"inline-block",

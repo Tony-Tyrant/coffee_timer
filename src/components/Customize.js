@@ -8,18 +8,8 @@ import { useFactor } from "./context/FactorContext";
 export default function Customize() {
     const { volume, powderRatio, pour, firstPour, firstPourOptions, totalTime, confirmed } = useFactor();
     const dispatch = useDispatch();
-    const lang = useLang();
 
-    function validateForm() {
-        if (volume<200 || volume>1000) {
-            return 1;
-        } else if (totalTime<120 || totalTime>300) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-    
+    const lang = useLang();
     const text = {
         volume1: {
             en: 'Amount of Coffee:',
@@ -78,7 +68,17 @@ export default function Customize() {
             zh: '重置'
         }
     }
-    console.log()
+
+    function validateForm() {
+        if (volume<200 || volume>1000) {
+            return 1;
+        } else if (totalTime<120 || totalTime>300) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    
     return (
         <div>
             <form className="mb-4">
