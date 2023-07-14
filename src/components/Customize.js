@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { updateVolume, updatePowderRatio, updatePour, updateFirstPour, updateTotalTime, reset, updateConfirm } from './slice/customizeSilce'
-import { useLang } from "./context/LangContext";
-import { useFactor } from "./context/FactorContext";
+import { useLang } from "./Context/LangContext";
+import { useFactor } from "./Context/FactorContext";
 
 
 export default function Customize() {

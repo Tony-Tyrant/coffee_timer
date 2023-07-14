@@ -1,5 +1,5 @@
 import React from "react";
-import { useLang } from "./context/LangContext";
+import { useLang } from "./Context/LangContext";
 
 export default function Header() {
     const lang = useLang();

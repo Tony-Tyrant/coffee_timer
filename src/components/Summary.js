@@ -1,7 +1,7 @@
 import React from "react";
-import { useFactor } from "./context/FactorContext";
+import { useFactor } from "./Context/FactorContext";
 import GenerateBarChart from "./GenerateBarChart";
-import { useLang } from "./context/LangContext";
+import { useLang } from "./Context/LangContext";
 import { useSelector } from "react-redux";
 
 export default function Summary() {

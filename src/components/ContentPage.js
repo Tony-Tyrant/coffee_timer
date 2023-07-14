@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { useLang } from "./context/LangContext";
+import { useLang } from "./Context/LangContext";
 import Header from "./Header";
 import Customize from "./Customize";
 import Summary from "./Summary";

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useFactor } from "./context/FactorContext";
-import { useLang } from "./context/LangContext";
+import { useFactor } from "./Context/FactorContext";
+import { useLang } from "./Context/LangContext";
 import { useSelector, useDispatch } from "react-redux";
 import { updateCount, resetCount } from "./slice/timerSilce";
 import { updateConfirm } from "./slice/customizeSilce";

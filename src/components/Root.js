@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
-import LangProvider from './context/LangContext';
-import FactorProvider from './context/FactorContext';
+import LangProvider from './Context/LangContext';
+import FactorProvider from './Context/FactorContext';
 
 export default function Root() {
     const navigate = useNavigate();

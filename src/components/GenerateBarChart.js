@@ -1,5 +1,5 @@
 import React from "react";
-import { useFactor } from "./context/FactorContext";
+import { useFactor } from "./Context/FactorContext";
 
 export default function GenerateBarChart() {
     const { firstPour, remainPour, water, pour } = useFactor();
