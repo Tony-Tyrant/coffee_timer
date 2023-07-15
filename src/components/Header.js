@@ -48,9 +48,7 @@ export default function Header() {
     
     return (
         <div>
-            <div 
-                className="pt-5 pb-3 mb-4 mx-0" 
-                id="banner">
+            <div className="pt-5 pb-3 mb-4 mx-0" id="banner">
                 <h1 
                     className="mx-5 mt-5 mb-3 pb-2 bg-warning-subtle text-warning-emphasis text-center" 
                     >

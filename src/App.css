@@ -4,7 +4,7 @@ html, body, #root{
 }
 
 #banner {
-  background-image: url("/coffee_background.jpeg");
+  background-image: url("./coffee_background.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
