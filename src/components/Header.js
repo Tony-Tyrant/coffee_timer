@@ -50,7 +50,7 @@ export default function Header() {
         <div>
             <div className="pt-5 pb-3 mb-4 mx-0" id="banner">
                 <h1 
-                    className="mx-5 mt-5 mb-3 pb-2 bg-warning-subtle text-warning-emphasis text-center" 
+                    className="mt-5 mb-3 pb-2 bg-warning-subtle text-warning-emphasis text-center" 
                     >
                     {text.title[lang]}
                 </h1>
@@ -58,7 +58,7 @@ export default function Header() {
 
             <div className="d-flex align-items-center flex-column">
                 <button 
-                    className="mx-3 my-2 p-2 border-2 toggler bg-warning-subtle text-warning-emphasis lead text-center" 
+                    className="mx-3 my-2 p-2 rounded border-2 border-secondary toggler bg-warning-subtle text-warning-emphasis lead text-center" 
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target="#About" 
