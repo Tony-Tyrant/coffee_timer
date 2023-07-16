@@ -99,7 +99,9 @@ export default function Summary() {
                 </table>
             </div>
             <div className="row border border-2 border-warning-subtle mb-4 p-3">
-                <GenerateBarChart />
+                <div className="col p-0 m-0">
+                    <GenerateBarChart />
+                </div>
                 <ol className="mx-2 m-0">
                     {summary}
                     <li key={intervalMap.length}>
