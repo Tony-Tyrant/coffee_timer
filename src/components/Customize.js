@@ -78,7 +78,7 @@ export default function Customize() {
             return 0;
         }
     }
-    
+
     return (
         <div>
             <form className="mb-4">
@@ -91,12 +91,11 @@ export default function Customize() {
                     inputMode="numeric"
                     min="200"
                     max="1000"
-                    value={volume}
+                    value={volume===0? "" : volume}
                     onChange={() => dispatch(updateVolume())}
-                    className="mx-2 text-center"
-                    disabled={confirmed} >
-
-                </input><span>ml</span>
+                    className={volume<200 || volume>1000? "mx-2 text-center bg-danger" : "mx-2 text-center"}
+                    disabled={confirmed} ></input>
+                <span>ml</span>
                 <br />
                 <label htmlFor="volume">{text.volume2[lang]}</label>
                 <hr /><br />
@@ -207,9 +206,9 @@ export default function Customize() {
                     inputMode="numeric"
                     min="120"
                     max="300"
-                    value={totalTime}
+                    value={totalTime===0? "" : totalTime}
                     onChange={() => dispatch(updateTotalTime())}
-                    className="mx-2 text-center"
+                    className={totalTime<120 || totalTime>300? "mx-2 text-center bg-danger" : "mx-2 text-center"}
                     disabled={confirmed}>
 
                 </input><span>s</span>

@@ -10,7 +10,6 @@ export default function GenerateBarChart() {
                 style={{
                     display:"inline-block",
                     left: "10px",
-                    zIndex: `${pour - 2 - index}`,
                     width: `${60/(pour-2)}%`,
                     height: "1.5rem",
                     backgroundColor: `${colorMap[index]}`,
@@ -26,7 +25,6 @@ export default function GenerateBarChart() {
                 style={{
                     display:"inline-block",
                     left: "10px",
-                    zIndex: `${pour}`,
                     width: `${firstPour / water * 100}%`,
                     height: "1.5rem",
                     backgroundColor: "#DFFF00",
@@ -36,7 +34,6 @@ export default function GenerateBarChart() {
                 style={{
                     display:"inline-block",
                     left: "10px",
-                    zIndex: `${pour - 1}`,
                     width: `${40 - (firstPour / water * 100)}%`,
                     height: "1.5rem",
                     backgroundColor: "#FFBF00",
