@@ -64,6 +64,7 @@ export default function Timer() {
     function clickBack() {
         dispatch(updateConfirm());
         clickReset();
+        window.location.href="#top"
     }
 
     useEffect(() => {
@@ -136,14 +137,12 @@ export default function Timer() {
                     disabled={confirmed ? 0 : 1}>
                     {text.reset[lang]}
                 </button>
-                <a href="#top">
                 <button
                     type="button"
                     onClick={clickBack}
                     disabled={confirmed ? 0 : 1}>
                     {text.back[lang]}
                 </button>
-                </a>
             </div>
             <div className="d-flex justify-content-center p-3">
                 <h3 id="display">{display}</h3>

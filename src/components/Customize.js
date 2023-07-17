@@ -89,6 +89,11 @@ export default function Customize() {
         document.getElementById('3rd').checked = true;
         document.getElementById('5').checked = true;
     }
+
+    function confirmHandler() {
+        window.location.href="#timer";
+        dispatch(updateConfirm());
+    }
     console.log(firstPour)
     return (
         <div>
@@ -228,16 +233,20 @@ export default function Customize() {
 
             </form>
             <div className="mt-3">
-                <a href="#timer">
                     <button 
                         type="button" 
                         disabled={validateForm() || confirmed}
                         className="mx-2" 
-                        onClick={() => dispatch(updateConfirm())}>
+                        onClick={confirmHandler}>
                         {text.confirm[lang]}
                     </button>
-                </a>
-                <button className="mx-2" type="reset" onClick={resetHandler}>{text.reset[lang]}</button>
+                <button 
+                    className="mx-2" 
+                    type="reset" 
+                    onClick={resetHandler}
+                    disabled={confirmed}>
+                    {text.reset[lang]}
+                </button>
             </div>
         </div>
     )
