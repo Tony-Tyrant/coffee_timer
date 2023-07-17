@@ -70,7 +70,7 @@ export default function Summary() {
             <li key={index}>
                 {` = ${time}${text.sammary1[lang]}${pourMap[index]}${text.sammary2[lang]}`}
                 <span hidden={showArrow(index)}>
-                    <b>{'<--'}</b>
+                    <b className="text-info fs-5">{' <--'}</b>
                 </span>
             </li>
         );
@@ -78,8 +78,8 @@ export default function Summary() {
 
     return (
         <div>
-            <div className="row border border-2 border-warning-subtle text-warning-emphasis text-center my-4 p-2">
-                <table>
+            <div className="row border border-2 rounded border-warning-subtle bg-warning bg-opacity-50 text-warning-emphasis text-center my-4" >
+                <table className="my-2">
                     <thead>
                         <tr>
                             <th>{text.water[lang]}</th>
@@ -98,7 +98,7 @@ export default function Summary() {
                     </tbody>
                 </table>
             </div>
-            <div className="row border border-2 border-warning-subtle mb-4 p-3">
+            <div className="row border border-2 rounded border-warning-subtle bg-warning bg-opacity-50 mb-4 p-3">
                 <div className="col p-0 m-0">
                     <GenerateBarChart />
                 </div>
@@ -107,7 +107,7 @@ export default function Summary() {
                     <li key={intervalMap.length}>
                         = {totalTime}{text.sammary3[lang]}
                         <span hidden={showArrow(intervalMap.length)}>
-                            <b>{'<--'}</b>
+                            <b className="text-info fs-5">{' <--'}</b>
                         </span>
                     </li>
                 </ol>

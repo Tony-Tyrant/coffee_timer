@@ -117,7 +117,7 @@ export default function Timer() {
     }, [display])
 
     return (
-        <div className="border border-2 border-warning-subtle p-3 my-md-4 mb-5 w-100 d-flex flex-column">
+        <div className="border border-2 rounded border-warning-subtle bg-warning bg-opacity-50 p-3 my-md-4 mb-5 w-100 d-flex flex-column">
             <div className="d-flex justify-content-center">
                 <button
                     type="button"

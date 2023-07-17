@@ -50,7 +50,7 @@ export default function Header() {
         <div>
             <div className="pt-5 pb-3 mb-4 mx-0" id="banner">
                 <h1 
-                    className="mt-5 mb-3 pb-2 bg-warning-subtle text-warning-emphasis text-center" 
+                    className="mt-5 mb-3 pb-2 px-3 px-sm-4 text-secondary-emphasis text-end text-uppercase bg-dark bg-opacity-50" 
                     >
                     {text.title[lang]}
                 </h1>
