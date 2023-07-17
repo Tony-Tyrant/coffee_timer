@@ -99,7 +99,7 @@ export default function Timer() {
                 setDisplay(`${count}s`);
                 interval = setInterval(() => {
                     dispatch(updateCount());
-                }, 10)
+                }, 1000)
             }
         }
         return () => {
