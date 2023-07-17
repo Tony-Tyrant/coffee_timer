@@ -79,6 +79,17 @@ export default function Customize() {
         }
     }
 
+    function volumeChangeHandler() {
+        dispatch(updateVolume());
+        setTimeout(()=>dispatch(updateFirstPour()),10);
+    }
+
+    function resetHandler() {
+        dispatch(reset());
+        document.getElementById('3rd').checked = true;
+        document.getElementById('5').checked = true;
+    }
+    console.log(firstPour)
     return (
         <div>
             <form className="mb-4">
@@ -92,7 +103,7 @@ export default function Customize() {
                     min="200"
                     max="1000"
                     value={volume===0? "" : volume}
-                    onChange={() => dispatch(updateVolume())}
+                    onChange={volumeChangeHandler}
                     className={volume<200 || volume>1000? "mx-2 text-center bg-danger" : "mx-2 text-center"}
                     disabled={confirmed} ></input>
                 <span>ml</span>
@@ -140,7 +151,7 @@ export default function Customize() {
                         <label htmlFor="4">4</label>
                     </div>
                     <div className="px-2 py-2">
-                        <input type="radio" id="5" value={5} name="pour" checked={pour===5? true : false}></input>
+                        <input type="radio" id="5" value={5} name="pour" defaultChecked></input>
                         <label htmlFor="5">5</label>
                     </div>
                     <div className="px-2 py-2">
@@ -182,7 +193,7 @@ export default function Customize() {
                         <label htmlFor="2nd">{firstPourOptions[1] + 'g'}</label>
                     </div>
                     <div className="px-2 py-2">
-                        <input type="radio" id="3rd" value={firstPourOptions[2]} name="firstPour" checked={firstPour===40? true : false}></input>
+                        <input type="radio" id="3rd" value={firstPourOptions[2]} name="firstPour" defaultChecked></input>
                         <label htmlFor="3rd">{firstPourOptions[2] + 'g'}</label>
                     </div>
                     <div className="px-2 py-2">
@@ -226,7 +237,7 @@ export default function Customize() {
                         {text.confirm[lang]}
                     </button>
                 </a>
-                <button className="mx-2" type="reset" onClick={() => dispatch(reset())}>{text.reset[lang]}</button>
+                <button className="mx-2" type="reset" onClick={resetHandler}>{text.reset[lang]}</button>
             </div>
         </div>
     )

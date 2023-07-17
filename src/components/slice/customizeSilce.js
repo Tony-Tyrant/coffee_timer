@@ -11,8 +11,8 @@ export const customizeSlice = createSlice({
         pourDefault: 5,
         totalTime: 150,
         totalTimeDefault: 150,
-        firstPour: 40,
-        firstPourDefault: 40,
+        firstPour: 60,
+        firstPourDefault: 60,
         confirmed: false, 
     },
     reducers: {

@@ -20,11 +20,11 @@ export default function FactorProvider({ children }) {
     const water = roundFive(volume + ( powder * 2 ));
 
     /* Calculate the options for the first pour */
-    const a = roundFive(powder);
-    const e = roundFive(water*0.2);
-    const b = roundFive((e-a)/4 + a);
-    const c = roundFive(2*(e-a)/4 + a);
-    const d = roundFive(3*(e-a)/4 + a);
+    const a = roundFive(powder*2);
+    const c = roundFive(water*0.2);
+    const b = roundFive((a+c)/2);
+    const e = roundFive(water*0.4-a);
+    const d = roundFive((c+e)/2);
     const firstPourOptions = [a, b, c, d, e];
 
     /* Calculate the water amount for each pour */
