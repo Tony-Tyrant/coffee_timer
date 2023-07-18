@@ -1,8 +1,8 @@
 import React from "react";
-import { useLang } from "./Context/LangContext";
+import { useParams } from "react-router-dom";
 
 export default function Header() {
-    const lang = useLang();
+    const { lang } = useParams();
     const text = {
         title: {
             en: "4:6 Coffee Brewing System Timer",

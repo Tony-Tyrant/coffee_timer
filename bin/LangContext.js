@@ -1,10 +1,10 @@
 import React, { createContext, useContext } from "react";
 import { useParams } from "react-router-dom";
 
-const LangContext = createContext('en');
+const LangContext = createContext();
 
 export default function LangProvider({ children }) {
-    let { lang } = useParams();
+    const { lang } = useParams();
 
     return (
         <LangContext.Provider value={lang}>

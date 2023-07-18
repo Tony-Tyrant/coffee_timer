@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useFactor } from "./Context/FactorContext";
-import { useLang } from "./Context/LangContext";
+import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { updateCount, resetCount } from "./slice/timerSilce";
 import { updateConfirm } from "./slice/customizeSilce";
@@ -16,7 +16,7 @@ export default function Timer() {
     const timeouts = [];
     let interval;
 
-    const lang = useLang();    
+    const { lang } = useParams();  
     const text = {
         start: {
             en: 'START',

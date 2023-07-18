@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { useLang } from "./Context/LangContext";
+import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Customize from "./Customize";
 import Summary from "./Summary";
 import Timer from "./Timer";
 
 export default function ContentPage() {
-    const lang = useLang();
+    const { lang } = useParams();
 
     return (
         <div className="container-fluid h-auto">

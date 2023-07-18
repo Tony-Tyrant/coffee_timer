@@ -1,15 +1,15 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { updateVolume, updatePowderRatio, updatePour, updateFirstPour, updateTotalTime, reset, updateConfirm } from './slice/customizeSilce'
-import { useLang } from "./Context/LangContext";
 import { useFactor } from "./Context/FactorContext";
+import { useParams } from "react-router-dom";
 
 
 export default function Customize() {
     const { volume, powderRatio, pour, firstPour, firstPourOptions, totalTime, confirmed } = useFactor();
     const dispatch = useDispatch();
 
-    const lang = useLang();
+    const { lang } = useParams();
     const text = {
         volume1: {
             en: 'Amount of Coffee:',
@@ -94,7 +94,7 @@ export default function Customize() {
         window.location.href="#timer";
         dispatch(updateConfirm());
     }
-    console.log(firstPour)
+    
     return (
         <div>
             <form className="mb-4">

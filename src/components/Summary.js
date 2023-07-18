@@ -1,7 +1,7 @@
 import React from "react";
 import { useFactor } from "./Context/FactorContext";
 import GenerateBarChart from "./GenerateBarChart";
-import { useLang } from "./Context/LangContext";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Summary() {
@@ -11,7 +11,7 @@ export default function Summary() {
     //console.log(pourMap)
     const count = useSelector(state => state.timer.count);
 
-    const lang = useLang();
+    const { lang } = useParams();
     const text = {
         water: {
             en: 'Total Water Amount',

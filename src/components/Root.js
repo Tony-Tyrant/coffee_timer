@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
-import LangProvider from './Context/LangContext';
 import FactorProvider from './Context/FactorContext';
+import { useParams } from 'react-router-dom';
 
 export default function Root() {
     const navigate = useNavigate();
+    const { lang } = useParams();
     useEffect(() => {
-        navigate("/en");
+        if (!lang) {
+            navigate("/en");
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
-        <LangProvider>
-            <FactorProvider>
-                <Outlet />
-            </FactorProvider>
-        </LangProvider>
+        <FactorProvider>
+            <Outlet />
+        </FactorProvider>
     )
 }
