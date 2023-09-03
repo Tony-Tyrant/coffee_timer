@@ -56,8 +56,8 @@ export default function Customize() {
             zh: '總沖煮時間',
         },
         totalTime2: {
-            en: '(min. 120s ~ max. 300s | Default 150s)',
-            zh: '(min. 120s ~ max. 300s | 預設為150秒)',
+            en: '(min. 120s ~ max. 300s | Default 175s)',
+            zh: '(min. 120s ~ max. 300s | 預設為175秒)',
         },
         confirm: {
             en: 'CONFIRM',

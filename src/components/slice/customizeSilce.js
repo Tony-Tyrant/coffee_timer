@@ -9,7 +9,7 @@ export const customizeSlice = createSlice({
         powderRatioDefault: 15,
         pour: 5,
         pourDefault: 5,
-        totalTime: 150,
+        totalTime: 175,
         totalTimeDefault: 150,
         firstPour: 60,
         firstPourDefault: 60,
