@@ -16,8 +16,8 @@ export default function FactorProvider({ children }) {
     const confirmed = useSelector(state => state.customize.confirmed);
     
     /* calculate the amount of coffee powder and water needed */
-    const powder = Math.round(volume / (powderRatio - 1));
-    const water = roundFive(volume + ( powder ));
+    const powder = Math.round(volume / (powderRatio - 1.5));
+    const water = roundFive(volume + ( powder*1.5 ));
 
     /* Calculate the options for the first pour */
     const a = roundFive(powder*2);
